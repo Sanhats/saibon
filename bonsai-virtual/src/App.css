@@ -1,0 +1,55 @@
+/* Animaciones para el Bonsai */
+.bonsai-container {
+  animation: float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+/* Efectos de hover y transiciones */
+.stat-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Colores y gradientes */
+.bg-brown-600 {
+  background-color: #8B4513;
+}
+
+.bg-brown-700 {
+  background-color: #654321;
+}
+
+/* Efectos de profundidad */
+.tree-shadow {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Animaciones de crecimiento */
+@keyframes grow {
+  from {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.growing {
+  animation: grow 0.5s ease-out forwards;
+}
